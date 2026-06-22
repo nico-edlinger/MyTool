@@ -1,20 +1,20 @@
 package at.nicoedlinger.mytool.screenshots;
 
 import at.nicoedlinger.mytool.logger.Logger;
-import at.nicoedlinger.mytool.username.Username;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static at.nicoedlinger.mytool.path.Path.getScreenshotsPath;
 
 public class Screenshots {
     /**
      * The path to the screenshots folder of the user
      */
-    private static Path PATH = null;
+    private static final Path PATH = Path.of(getScreenshotsPath());
     /**
      * All paths of the screenshots
      */
@@ -24,7 +24,6 @@ public class Screenshots {
      * Method to delete all Screenshots of the user
      */
     public static void deleteAll() {
-        setPath();
         getImagePaths();
 
         for (Path imagePath : imagePaths) {
@@ -36,13 +35,6 @@ public class Screenshots {
         }
 
         imagePaths.clear();
-    }
-
-    /**
-     * Helper method to set the path to the screenshots folder of the user
-     */
-    private static void setPath() {
-        PATH = Paths.get("C:\\Users\\" + Username.getUsername() + "\\Pictures\\Screenshots");
     }
 
     /**
