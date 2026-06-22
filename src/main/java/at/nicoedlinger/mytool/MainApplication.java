@@ -1,5 +1,6 @@
 package at.nicoedlinger.mytool;
 
+import at.nicoedlinger.mytool.username.Username;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -15,5 +16,7 @@ public class MainApplication extends Application {
         stage.setTitle("Main");
         stage.setScene(scene);
         stage.show();
+
+        if (!Username.usernameExists()) Username.createUsername();
     }
 }
