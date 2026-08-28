@@ -19,9 +19,15 @@ import java.util.List;
 public class Information {
     // The stage of the window
     private static final Stage stage = new Stage();
+
+    // the size of the window
     private static final int WINDOW_WIDTH = 300;
     private static final int WINDOW_HEIGHT = 100;
+
+    // the vertical distance between the elements
     private static final int V_SPACE = 10;
+
+    // colours for the styling
     private static final String BACKGROUND_COLOUR = "#8AA8A1";
     private static final String BUTTON_COLOUR = "#EE7B30";
     private static final String FONT_COLOUR = "#FFFFFF";
