@@ -10,6 +10,9 @@ public class Downloads extends CleanUp {
     // static variable to save the message
     private static final String INFOMATION_TEXT = "Downloads sorted.";
 
+    /**
+     * Method to sort up the Downloads
+     */
     public static void sort(){
         CleanUp.setPath(Path.of(getDownloadsPath()));
         CleanUp.sort();

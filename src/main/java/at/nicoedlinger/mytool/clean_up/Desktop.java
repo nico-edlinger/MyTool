@@ -10,6 +10,9 @@ public class Desktop extends CleanUp {
     // static variable to save the message
     private static final String INFOMATION_TEXT = "Desktop cleared.";
 
+    /**
+     * Method to sort up the Desktop
+     */
     public static void sort(){
         CleanUp.setPath(Path.of(getDesktopPath()));
         CleanUp.sort();
