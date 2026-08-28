@@ -1,5 +1,6 @@
 package at.nicoedlinger.mytool.screenshots;
 
+import at.nicoedlinger.mytool.information.Information;
 import at.nicoedlinger.mytool.logger.Logger;
 
 import java.nio.file.Files;
@@ -11,6 +12,9 @@ import java.util.stream.Collectors;
 import static at.nicoedlinger.mytool.path.Path.getScreenshotsPath;
 
 public class Screenshots {
+    // static variable to save the message
+    private static final String INFOMATION_TEXT = "Screenshots cleared.";
+
     /**
      * The path to the screenshots folder of the user
      */
@@ -35,6 +39,8 @@ public class Screenshots {
         }
 
         imagePaths.clear();
+
+        Information.showInformationWindow(INFOMATION_TEXT);
     }
 
     /**
